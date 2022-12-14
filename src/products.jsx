@@ -1,16 +1,23 @@
 import React from "react";
 import OneProduct from './oneProduct';
 
-const Products = () => {
-    const name = "New Product Name";
-const description = 
-"New product description that we got from Product component using props.";
+const Products = ({products}) => {
+  //  const name = "Naziv proizvoda";
+//const description = 
+//"Malo duzi opis.";
+//const product={
+   // tittle: "Naziv",
+   // description: "Malo duzi opis",
+//};
+
+
 
   return (
     <div className="all-products">
-   <OneProduct prodName={name} prodDesc={description} />
-   <OneProduct prodName={name} prodDesc={description} />
-   <OneProduct prodName={name} prodDesc={description} />
+        {products.map((prod) => (
+         <OneProduct product={prod} key={prod.id}/>
+      )  )}
+
   </div>
 
   )

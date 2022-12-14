@@ -1,7 +1,13 @@
 import React from "react";
 
-const OneProduct = (props) => {
+
+//DESTRUKTUIRANJE OBJEKATA
+const OneProduct = ({product}) => {
   const design = { margin: 10, borderStyle: "dashed" };
+  //console.log(props);
+  function onAdd(title){
+    console.log("Dodat proizvod: "+ title);
+  }
   return (
     <div className="card" style={design}>
       <img
@@ -10,11 +16,11 @@ const OneProduct = (props) => {
         alt="Neka slika"
       />
       <div className="card-body">
-        <h3 className="card-title">{props.prodName}</h3>
+        <h3 className="card-title">{product.tittle}</h3>
         <p className="card-text">
-        {props.prodDesc}
+        {product.description}
         </p>
-        <button className="btn">+</button>
+        <button className="btn" onClick={()=>onAdd(product.title)}>+</button>
         <button className="btn">-</button>
       </div>
     </div>
