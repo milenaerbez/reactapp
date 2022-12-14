@@ -1,8 +1,12 @@
 import './App.css';
 import NavBar from './navBar';
 import Products from './products';
+import {useState} from "react";
 
 function App() {
+  //let cartNum=0;
+  //const [first, setfirst] = useState(second)
+  const[cartNum, setCartNum]=useState(0);
   const products = [
     {
       id: 1,
@@ -26,14 +30,18 @@ function App() {
       amount: 0,
     },
   ];
+//PREMESTILI SMO FUNKCIJU ONADD U APP.JS JER ZELIMO DA SE PROMENI NAVBAR
+  function addProduct(title){
+    console.log("Dodat je proizvod: "+title);
+  //cartNum++;
+  setCartNum(cartNum+1);
+  //console.log(cartNum); //ovaj red se izvrsava pre nego prethodni zato u consoli bude broj manji nego u korpi
 
-  function addProduct(){
-    console.log("Nalazimo se u kompon add");
   }
 
   return (
     <div className="App">
-      <NavBar/>
+      <NavBar cartNum={cartNum}/>
     <Products products={products} onAdd={addProduct}/>
     </div>
   );
