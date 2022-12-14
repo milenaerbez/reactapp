@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+
 
 function NavBar() {
   return (
     <div className="navBar">
-        <a>My store</a>
-        </div>
-  )
+      <a>My Store</a>
+      <a className="cart-items">
+      
+        <div className="cart-num">0</div>
+      </a>
+    </div>
+  );
 }
 
-export default NavBar
+export default NavBar;

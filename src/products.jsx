@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import OneProduct from './oneProduct';
 
 const Products = () => {
   return (
-    <div>products</div>
+    <div className="all-products">
+    <OneProduct />
+    <OneProduct />
+    <OneProduct />
+  </div>
+
   )
 }
 
-export default products
+export default Products;
