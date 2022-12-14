@@ -2,12 +2,12 @@ import React from "react";
 
 
 //DESTRUKTUIRANJE OBJEKATA
-const OneProduct = ({product}) => {
+const OneProduct = ({product, onAdd}) => {
   const design = { margin: 10, borderStyle: "dashed" };
   //console.log(props);
-  function onAdd(title){
-    console.log("Dodat proizvod: "+ title);
-  }
+  //function onAdd(title){
+  //  console.log("Dodat proizvod: "+ title);
+  
   return (
     <div className="card" style={design}>
       <img
@@ -25,6 +25,6 @@ const OneProduct = ({product}) => {
       </div>
     </div>
   );
-};
 
+}
 export default OneProduct;

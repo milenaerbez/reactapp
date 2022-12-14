@@ -27,10 +27,14 @@ function App() {
     },
   ];
 
+  function addProduct(){
+    console.log("Nalazimo se u kompon add");
+  }
+
   return (
     <div className="App">
       <NavBar/>
-    <Products products={products}/>
+    <Products products={products} onAdd={addProduct}/>
     </div>
   );
 }

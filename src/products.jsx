@@ -1,7 +1,7 @@
 import React from "react";
 import OneProduct from './oneProduct';
 
-const Products = ({products}) => {
+const Products = ({products, onAdd}) => {
   //  const name = "Naziv proizvoda";
 //const description = 
 //"Malo duzi opis.";
@@ -15,7 +15,7 @@ const Products = ({products}) => {
   return (
     <div className="all-products">
         {products.map((prod) => (
-         <OneProduct product={prod} key={prod.id}/>
+         <OneProduct product={prod} key={prod.id} onAdd={onAdd}/> //sa leve str jednakosti je property a sa desne funkcija
       )  )}
 
   </div>
