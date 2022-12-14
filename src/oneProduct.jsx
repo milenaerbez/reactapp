@@ -1,6 +1,6 @@
 import React from "react";
 
-const OneProduct = () => {
+const OneProduct = (props) => {
   const design = { margin: 10, borderStyle: "dashed" };
   return (
     <div className="card" style={design}>
@@ -10,9 +10,9 @@ const OneProduct = () => {
         alt="Neka slika"
       />
       <div className="card-body">
-        <h3 className="card-title">Product name</h3>
+        <h3 className="card-title">{props.prodName}</h3>
         <p className="card-text">
-          Product description where we can read more details about it.
+        {props.prodDesc}
         </p>
         <button className="btn">+</button>
         <button className="btn">-</button>
